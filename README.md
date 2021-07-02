@@ -1,3 +1,33 @@
+TJN Test
+--------
+
+WARNING: THIS IS ONLY A TEST TO HAVE CMAKE/C++ HELLO WORLD MOST SHOULD
+IGNORE THIS AND LOOK AT THE ORIGINAL.
+
+This is a CMake Hello World (C++) with additions of the
+Alltoall spc timer example code to test using it to access
+the non-public C helper function that lives in our libmpi.so
+
+ - 1. Load modules (e.g., `cmake`, `openmpi/onlytimer.debug`)
+ - 2. Make build subdir
+    ```
+       cd cmake-hello-world/
+       mkdir build-mpi/
+    ```
+
+ - 3. Change to build subdir and build
+    ```
+       cd build-mpi/
+       cmake .. && make
+    ```
+
+ - 4. Run example w/ extern ref to helper function
+    ```
+       mpirun -np 4 ./CMakeHelloWorld
+    ```
+
+====
+
 This is an extremely simple example C++ application which uses CMake. 
 It will build and install an application called CMakeHelloWorld which simply outputs "Hello, world!" to stdout.  
 
